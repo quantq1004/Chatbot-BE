@@ -6,12 +6,9 @@ const createChat = async (req, res) => {
   return res.send({ chat });
 };
 
-const getChatsByUserId = async (req, res) => {
-  const userId = req.query.userId;
-  if (!userId) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  const chats = await chatDao.getChatsByUserId(userId);
+const getChatsByConversationId = async (req, res) => {
+  const conversationId = req.query.conversationId;
+  const chats = await chatDao.getChatsByConversationId(conversationId);
   return res.send({ chats });
 };
 
