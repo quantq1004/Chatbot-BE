@@ -7,7 +7,7 @@ const createChat = async (req, res) => {
 };
 
 const getChatsByUserId = async (req, res) => {
-  const { userId } = req.params;
+  const userId = req.query.userId;
   if (!userId) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
