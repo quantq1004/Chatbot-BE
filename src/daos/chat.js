@@ -6,7 +6,7 @@ const createChat = async ({ userPrompt, aiResponse, conversationId }) => {
   return chat;
 };
 
-const getChatsByConversationId = async (userId) => {
+const getChatsByConversationId = async (conversationId) => {
   const chats = await Chat.find({ conversationId }).lean();
   return chats;
 };
