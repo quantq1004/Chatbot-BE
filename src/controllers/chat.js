@@ -31,4 +31,4 @@ const deleteChat = async (req, res) => {
   return res.send({});
 };
 
-module.exports = { createChat, getChatsByUserId, getChat, updateChat, deleteChat };
+module.exports = { createChat, getChatsByConversationId, getChat, updateChat, deleteChat };
