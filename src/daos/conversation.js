@@ -24,7 +24,7 @@ const createConversation = async ({ title, userId }) => {
 // };
 
 const getConversationsByUserId = async (userId) => {
-  const conversations = await Conversation.find({ userId }).lean();
+  const conversations = await Conversation.find({ userId }).sort({ updatedAt: -1 }).lean();
   return conversations;
 };
 
